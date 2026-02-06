@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Duckweed Egg Omelet Recipe</title>
+
+<style>
+:root{
+  --bg:#081915;
+  --card:#102f28;
+  --accent:#38f2a5;
+  --muted:#9bdac4;
+  --text:#e9fff7;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background:linear-gradient(180deg,#061410,#0b1f1a);
+  color:var(--text);
+  line-height:1.6;
+}
+
+.container{
+  max-width:420px;
+  margin:auto;
+  padding:20px;
+}
+
+/* HEADER */
+.header{
+  text-align:center;
+  padding:30px 10px 20px;
+}
+.header h1{
+  font-size:1.9rem;
+  line-height:1.2;
+}
+.header p{
+  color:var(--muted);
+  margin-top:10px;
+}
+
+/* HERO IMAGE PLACEHOLDER */
+.hero{
+  background:linear-gradient(135deg,#0e3a30,#165e4a);
+  border-radius:20px;
+  height:160px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:3rem;
+  margin:20px 0;
+}
+
+/* CARDS */
+.card{
+  background:var(--card);
+  border-radius:16px;
+  padding:18px;
+  margin-bottom:14px;
+}
+
+.card h3{
+  margin-bottom:10px;
+}
+
+/* LIST */
+ul{
+  padding-left:18px;
+}
+li{
+  margin-bottom:8px;
+  font-size:.95rem;
+}
+
+/* STEPS */
+.step{
+  display:flex;
+  gap:12px;
+  margin-bottom:12px;
+}
+.step span{
+  font-size:1.4rem;
+}
+
+/* TIPS */
+.tip{
+  font-size:.9rem;
+  color:var(--muted);
+  margin-top:6px;
+}
+
+/* BUTTON */
+.back{
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  background:var(--accent);
+  color:#032018;
+  padding:14px;
+  border-radius:26px;
+  font-weight:600;
+  margin:30px 0 10px;
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  font-size:.85rem;
+  color:#7fbfa8;
+  margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Duckweed Egg Omelet</h1>
+    <p>Traditional Thai-style protein dish using water lentils</p>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">🍳🌿</div>
+
+  <!-- INTRO -->
+  <div class="card">
+    <p class="tip">
+      In Thailand, duckweed (Wolffia) is called <strong>“eggs of the water”</strong>.
+      It’s commonly cooked with eggs to make a soft, nutritious omelet.
+    </p>
+  </div>
+
+  <!-- INGREDIENTS -->
+  <div class="card">
+    <h3>Ingredients</h3>
+    <ul>
+      <li>🥚 2 eggs</li>
+      <li>🌿 2–3 tablespoons fresh duckweed (cleaned)</li>
+      <li>🧂 Salt to taste</li>
+      <li>🧄 Optional: onion, garlic, chili</li>
+      <li>🛢️ Small amount of oil</li>
+    </ul>
+  </div>
+
+  <!-- STEPS -->
+  <div class="card">
+    <h3>How to Cook</h3>
+
+    <div class="step">
+      <span>1️⃣</span>
+      <p>Rinse duckweed thoroughly in clean water. Drain well.</p>
+    </div>
+
+    <div class="step">
+      <span>2️⃣</span>
+      <p>Crack eggs into a bowl, add salt, beat lightly.</p>
+    </div>
+
+    <div class="step">
+      <span>3️⃣</span>
+      <p>Mix duckweed into the eggs until evenly spread.</p>
+    </div>
+
+    <div class="step">
+      <span>4️⃣</span>
+      <p>Heat pan with a little oil over medium heat.</p>
+    </div>
+
+    <div class="step">
+      <span>5️⃣</span>
+      <p>Pour mixture into pan. Cook until set and lightly golden.</p>
+    </div>
+
+    <div class="step">
+      <span>6️⃣</span>
+      <p>Flip once (optional). Serve hot.</p>
+    </div>
+  </div>
+
+  <!-- NUTRITION -->
+  <div class="card">
+    <h3>Why This Is Powerful</h3>
+    <ul>
+      <li>✅ Complete amino acids</li>
+      <li>✅ High protein, low cost</li>
+      <li>✅ Minimal cooking time</li>
+      <li>✅ Traditional + sustainable food</li>
+    </ul>
+  </div>
+
+  <!-- SAFETY -->
+  <div class="card">
+    <h3>Important Notes</h3>
+    <p class="tip">
+      • Use only duckweed grown in clean, controlled water<br>
+      • Never harvest from polluted ponds<br>
+      • Cook before eating
+    </p>
+  </div>
+
+  <!-- BACK -->
+  <a class="back" href="index.html">← Back to Home</a>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Simple food. Ancient knowledge. Future protein.
+  </div>
+
+</div>
+
+</body>
+</html>
