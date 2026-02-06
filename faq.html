@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Protein in a Bucket</title>
+
+<style>
+:root{
+  --bg:#081915;
+  --card:#102f28;
+  --accent:#38f2a5;
+  --muted:#9bdac4;
+  --text:#e9fff7;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background:linear-gradient(180deg,#061410,#0b1f1a);
+  color:var(--text);
+  line-height:1.6;
+}
+
+.container{
+  max-width:420px;
+  margin:auto;
+  padding:20px;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:40px 10px 30px;
+}
+.hero h1{
+  font-size:2rem;
+  line-height:1.2;
+}
+.hero p{
+  color:var(--muted);
+  margin:12px 0 20px;
+}
+.hero button{
+  background:var(--accent);
+  color:#032018;
+  border:none;
+  padding:14px 22px;
+  font-size:1rem;
+  border-radius:30px;
+  font-weight:600;
+}
+
+/* FLOATING DUCKWEED */
+.pond{
+  position:relative;
+  height:120px;
+  margin:30px 0;
+  overflow:hidden;
+}
+.dot{
+  position:absolute;
+  width:8px;
+  height:8px;
+  background:#41ffb3;
+  border-radius:50%;
+  opacity:.7;
+  animation:float 6s infinite ease-in-out;
+}
+
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+  100%{transform:translateY(0)}
+}
+
+/* CARDS */
+.card{
+  background:var(--card);
+  border-radius:16px;
+  padding:18px;
+  margin-bottom:14px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.small{
+  font-size:.9rem;
+  color:var(--muted);
+}
+
+/* STEPS */
+.step{
+  display:flex;
+  gap:14px;
+  margin-top:8px;
+}
+.step span{
+  font-size:1.4rem;
+}
+
+/* FAQ */
+.faq-item{
+  background:#0e2a23;
+  border-radius:14px;
+  margin-bottom:10px;
+  overflow:hidden;
+}
+.faq-q{
+  padding:14px 16px;
+  font-weight:600;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+}
+.faq-q span{
+  font-size:1.2rem;
+}
+.faq-a{
+  padding:0 16px 16px;
+  font-size:.9rem;
+  color:var(--muted);
+  display:none;
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  font-size:.85rem;
+  color:#7fbfa8;
+  margin:40px 0 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Grow Protein<br>in a Bucket</h1>
+    <p>Doubles every 48 hours • No soil • 5-minute setup</p>
+    <button onclick="scrollToSetup()">See 5-Minute Setup</button>
+  </section>
+
+  <!-- FLOATING DUCKWEED -->
+  <div class="pond" id="pond"></div>
+
+  <!-- WHY -->
+  <div class="card">
+    <h3>What Is This?</h3>
+    <p class="small">
+      Duckweed (also called water lentils or wolffia) is a tiny floating plant
+      eaten for centuries in Thailand and tested by NASA for space food.
+    </p>
+  </div>
+
+  <!-- STATS -->
+  <div class="grid">
+    <div class="card">🥩 Beef<br><strong>26%</strong> protein</div>
+    <div class="card">🥚 Eggs<br><strong>13%</strong></div>
+    <div class="card">🌱 Soy<br><strong>36%</strong></div>
+    <div class="card">🪴 Duckweed<br><strong>45%</strong></div>
+  </div>
+
+  <!-- SETUP -->
+  <div id="setup" class="card">
+    <h3>5-Minute Setup</h3>
+    <div class="step"><span>🪣</span><p>Wide container, ~3 inches of water</p></div>
+    <div class="step"><span>💧</span><p>Dechlorinated / rain / pond water</p></div>
+    <div class="step"><span>🌿</span><p>Add duckweed (10–20% surface)</p></div>
+    <div class="step"><span>☀️</span><p>Bright indirect light</p></div>
+    <div class="step"><span>⏱️</span><p>Harvest every 3–5 days</p></div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="card">
+    <h3>FAQ</h3>
+
+    <div class="faq-item">
+      <div class="faq-q">Is duckweed safe to eat? <span>＋</span></div>
+      <div class="faq-a">
+        Yes — specific species like wolffia and lemna are traditionally eaten
+        and studied for human nutrition. Always grow in clean water.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Does it really double every 48 hours? <span>＋</span></div>
+      <div class="faq-a">
+        Under good light and nutrients, duckweed can double its biomass in
+        48–72 hours. Growth speed depends on temperature and water quality.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Do I need fertilizer? <span>＋</span></div>
+      <div class="faq-a">
+        Fish tank water is ideal. Otherwise, use very diluted liquid fertilizer
+        or aquarium plant nutrients in tiny amounts.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Does it taste bad? <span>＋</span></div>
+      <div class="faq-a">
+        Fresh duckweed tastes mild and slightly nutty. It’s commonly mixed
+        into omelets, soups, smoothies, or dried into powder.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Can I grow this indoors? <span>＋</span></div>
+      <div class="faq-a">
+        Yes. A bright window or simple grow light works. Duckweed needs
+        surface light, not deep water.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Is this better than meat or soy? <span>＋</span></div>
+      <div class="faq-a">
+        Duckweed has a complete amino acid profile and far lower environmental
+        impact. It complements food systems rather than replacing everything.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Why isn’t everyone growing this? <span>＋</span></div>
+      <div class="faq-a">
+        It can’t be patented, looks unimpressive, and doesn’t fit industrial
+        agriculture models — so it was largely ignored in the West.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Can I release extra duckweed outside? <span>＋</span></div>
+      <div class="faq-a">
+        No. Duckweed can become invasive. Compost excess or feed it to fish,
+        chickens, or livestock.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Protein independence doesn’t need land.<br>
+    Knowledge preserved by tradition, proven by science.
+  </div>
+
+</div>
+
+<script>
+/* Floating dots */
+const pond = document.getElementById("pond");
+for(let i=0;i<35;i++){
+  const d=document.createElement("div");
+  d.className="dot";
+  d.style.left=Math.random()*100+"%";
+  d.style.top=Math.random()*100+"%";
+  d.style.animationDelay=(Math.random()*5)+"s";
+  pond.appendChild(d);
+}
+
+/* FAQ toggle */
+document.querySelectorAll(".faq-q").forEach(q=>{
+  q.onclick=()=>{
+    const a=q.nextElementSibling;
+    const open=a.style.display==="block";
+    document.querySelectorAll(".faq-a").forEach(x=>x.style.display="none");
+    document.querySelectorAll(".faq-q span").forEach(s=>s.textContent="＋");
+    if(!open){
+      a.style.display="block";
+      q.querySelector("span").textContent="−";
+    }
+  };
+});
+
+function scrollToSetup(){
+  document.getElementById("setup").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
